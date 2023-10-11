@@ -26,12 +26,30 @@ img {
     padding: 20px 20px 15px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     width: 140px;
-    left: 0;
+    right: 30px;
+    margin-left: -20px;
+    text-align: start;
+}
+.dropdown-content-1 {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #f9f9f9;
+    top: 27px;
+    padding: 20px 20px 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 140px;
+    right: 10px;
     margin-left: -20px;
     text-align: start;
 }
 
 .dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-content-1 {
     opacity: 1;
     visibility: visible;
 }
@@ -271,6 +289,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .abc{
     position: relative;
+    transition: all 0.5s;
+}
+.abc:hover{
+    color: #848484;
 }
 
 .abc::before {
@@ -352,7 +374,6 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-size: cover;
     height: 200px;
     transition: all 0.5s;
-    /* z-index: -1; */
 }
 
 .lastscale:hover {
